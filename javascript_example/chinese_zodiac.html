@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>
+            태어난 연도를 입력, 그 해의 띠 출력 프로그램
+        </title>
+        <script>
+            var input = parseInt(prompt("태어난 연도", "입력해주세요"));
+            var year = input % 12;
+             
+            var chin = {
+                0 : "원숭이띠",
+                1 : "닭띠",
+                2 : "개띠",
+                3 : "돼지띠",
+                4 : "쥐띠",
+                5 : "소띠",
+                6 : "호랑이띠",
+                7 : "토끼띠",
+                8 : "용띠",
+                9 : "뱀띠",
+                10 : "말띠",
+                11 : "양띠",
+
+                clas: function(year) {
+                        alert(input + '년 출생은 ' + this[year] + " 입니다.");
+                }
+            };
+
+            chin.clas(year);
+        </script>
+    </head>
+
+    <body>
+
+    </body>
+</html>

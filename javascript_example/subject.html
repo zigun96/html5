@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+        <script>
+            class Subject {
+                constructor(number, title, page, units) { // 생성자 constructor(매개변수...)를 이용한 class 생성
+                    this.number = number;
+                    this.title = title;
+                    this.page = page;
+                    this.units = units;
+                } 
+                print() { // 메서드
+                    console.log(this.number, this.title,"p." + this.page);
+                }
+            }
+
+            var subject = new Subject( // 생성자를 호출하여 인스턴스 생성
+                1, "자바스크립트 기본 용어와 출력 방법", 287, ["자바스크립트 기본 용어","자바스크립트 출력"]
+            );
+            
+            var subjects = [
+                subject,
+                new Subject(2, "자료형과 변수", 292, ["자료형", "변수"]),
+                new Subject(3, "조건문과 반복문", 300, ["조건문", "반복문"]),
+            ];
+            for (var s of subjects) {
+                s.print();
+            }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
