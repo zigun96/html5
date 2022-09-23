@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+        <script>
+            // 함수를 선언합니다.
+            function callTenTimes(callback) {
+                // 10회 반복합니다.
+                for (var i = 0; i < 10; i++){
+                    callback(); // 'callback' 변수 호출
+                }
+            }
+
+            // 변수를 선언합니다.
+            var callback = function () { // 이름 없는 함수 저장
+                alert('함수 호출');
+            };
+
+            callTenTimes(callback);
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
