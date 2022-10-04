@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            연관 있는 입력 양식 그룹으로 묶기
+        </title>
+        <style>
+            label {
+                display: inline-block; /*해당 내용의 요소만큼만 자리차지*/
+                width: 3em; /*너비를 3글자로 맞춰줌*/
+            }
+        </style>
+
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>입력 양식</legend>
+                <table>
+                    <div> <!-- 블록 형식 --><!-- 항상 새로운 라인에서 시작함 -->
+                        <span><label for ="name" >이&nbsp&nbsp&nbsp름</label></span> <!-- 인라인 형식 -->
+                        <span><input id = "name" type ="text"></span> <!-- 새로운 라인에서 시작하지 않음 -->
+                    </div>
+                    <div>
+                        <span><label for="mail">이메일</label></span>
+                        <span><input id="mail" type="email"></span>
+                    </div>
+                </table>
+                <input type = "submit">
+            </fieldset>
+        </form>
+    </body>
+</html>

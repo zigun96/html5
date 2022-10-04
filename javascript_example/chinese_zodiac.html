@@ -6,7 +6,7 @@
             태어난 연도를 입력, 그 해의 띠 출력 프로그램
         </title>
         <script>
-            var input = prompt("태어난 연도", "입력해주세요");
+            var input = parseInt(prompt("태어난 연도", "입력해주세요"));
             var year = input % 12;
              
             var chin = {
@@ -24,7 +24,7 @@
                 11 : "양띠",
 
                 clas: function(year) {
-                        alert(this[year] + " 입니다.");
+                        alert(input + '년 출생은 ' + this[year] + " 입니다.");
                 }
             };
 
