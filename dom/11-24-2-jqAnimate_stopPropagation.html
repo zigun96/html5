@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Event Basic
+    </title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("last-el").click(function () {
+                alert("last-el");
+            });
+
+            $(".third-cover").click(function (event) {
+                alert("third-cover");
+            });
+
+            $(".second-cover").click(function () {
+                alert("second-cover");
+            });
+
+            $(".first-cover").click(function () {
+                alert("first-cover");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="first-cover">
+        <ul class="second-cover">
+            <li class="third-cover">
+                <div class="last-el">event</div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Event Basic
+        </title>
+    </head>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        // 이벤트 연결
+        $(document).ready(function () {
+            // 이벤트 연결
+            $('button').click(function () {
+                // 간단 효과 적용
+                $('.page').fadeToggle('slow');
+            });
+        });
+    </script>
+    <body>
+        <button>Toggle Show</button>
+        <div class="page">
+            <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum officia repellendus mollitia perferendis pariatur, est reiciendis alias quis assumenda sit quae id nemo impedit repudiandae ex ipsa, beatae doloremque eos.</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda doloremque natus accusantium laboriosam unde quos commodi quas illum nihil. Minus tenetur mollitia facere vitae quam earum quasi eaque incidunt laborum?</p>
+
+        </div>
+    </body>
+</html>
