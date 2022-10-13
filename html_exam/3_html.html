@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        HTML 화면 구현
+    </title>
+    <style>
+        .container {
+            text-align: center;
+            background-color: antiquewhite;
+            max-width: 50%; /* 보이는 화면에 대한 상대적인 너비 */
+            min-width: 280px;
+            max-height: 100vh; /* 보이는 화면에 대한 상대적인 높이 */
+            min-height: 80vh;
+            border-radius: 2%; /* 모서리 둥근 정도 */
+            box-shadow: gray 0px 5px 8px ; /* 색 좌,우 상,하 투명도 */
+        }
+
+        label {
+            display:inline-block; /* inline 효과로 구성요소들이 한 줄에 들어가고, block효과로 width, height, margin, padding 속성 지정이 가능해진다 */
+            width: 5em; /* 5글자만큼의 너비를 가지기 */
+            text-align: center;
+            
+        }
+
+        h1 {
+            padding-top: 20px;  
+        }
+
+        input {
+            margin-bottom: 10px;
+        }
+
+        .box {
+            align-items: right;
+        }
+
+        .image {
+            padding: 10px;
+        }
+
+        .submit {
+            width:80px;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="container">
+        
+            <h1>회원가입</h1>
+        
+        <div class="image">
+            <input type="image" src="http://place-hold.it/150x150">
+        </div>
+        <div class="box">
+            <div><label>이메일</label>
+                <input type="text">
+            </div>
+
+            <div><label>암호</label>
+                <input type="password">
+            </div>
+
+            <div><label>암호확인</label>
+                <input type="password">
+            </div>
+
+            <div><input class="submit" type="submit" value="제출"></div>
+        </div>
+    </form>
+</body>
+
+</html>
