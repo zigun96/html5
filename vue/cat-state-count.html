@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="app">
+            <h1>Count: {{ state.count }}</h1>
+            <button v-on:click="state.count++;">클릭</button>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10"></script>
+        <script>
+            var state = { count: 0 };
+            var app = new Vue({
+                el: '#app', // 셀렉터는 el로 지정하는게 vue 2 룰
+                data: {
+                    state: state,
+                },
+            });
+        </script>
+    </body>
+</html>
