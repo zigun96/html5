@@ -1,0 +1,14 @@
+<div id="app">
+    <comp />
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10"></script>
+<script>
+    Vue.component('comp', {
+        render(h) { // 랜더링을 직접함 매개변수로 받은 h를 사용
+            return h("span", "안녕하세요, Vue입니다.");
+        }
+    });
+    new Vue({
+        el: '#app',
+    });
+</script>

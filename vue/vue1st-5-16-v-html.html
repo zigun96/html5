@@ -1,0 +1,12 @@
+<div id="app">
+  <div v-html="rawHtml"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10"></script>
+<script>
+  var vm = new Vue({
+    el: "#app",
+    data: {
+      rawHtml: "Hello <b>Vue.js<b>",
+    },
+  });
+</script>
