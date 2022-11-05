@@ -1,0 +1,13 @@
+<div id="app">
+    <span v-if="id == 1">값이 1입니다.</span>
+    <span v-if="id == 2">값이 2입니다.</span>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10"></script>
+<script>
+    var app = new Vue ({
+        el: '#app',
+        data: {
+            id: 1,
+        },
+    });
+</script>

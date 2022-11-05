@@ -1,0 +1,14 @@
+<div id="app">
+    <ul>
+        <li v-for="(n, index) in list">{{index}} : {{ n }}</li>
+    </ul>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            list: ["Vue.js", "React.js", "Polymer.js", "Google", "Hanbit"]
+        },
+    });
+</script>
