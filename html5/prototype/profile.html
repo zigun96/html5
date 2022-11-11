@@ -6,37 +6,46 @@
     <style>
       #container {
         width: 340px;
-        height: 100%;
+        height: 100vh;
         border: 1px solid #eeeeee;
-        margin: 0 auto; /* 가운데 정렬 */
+        margin: 0 auto;
+      }
+      #profile {
+        text-align: center;
+        display: flex; 
+        /* flex-direction:column; */ /* 이 설정시 수직으로 내용 배치, 선언 전 display: flex 선언 필요*/
+        align-items: center; /* 수직정렬 */
+        justify-content: space-between;  /* 수평정렬 */
+        background: #eeeeee;
+        height: 100px;
+        gap: 20px;
+      }
+      .profile_picture {
+        float: left;
+      }
+      .label {
+        display: block;
       }
       #gallery {
         display: grid;
-        gap: 10px; /* grid 자식요소간의 간격 */
-        grid-template-columns: 1fr 1fr 1fr;
-        padding: 10px; /* 부모와 자식요소간의 간격 */
-      }
-      #profile {
-        display: grid;
-        padding: 8px;
-        background: #eeeeee;
-        height: 100px;
-        grid-template-columns: 100px 3rem 3rem 3rem;
-      }
-      #label {
-        display: flex;
-        padding: 1rem;
-
+        gap: 20px;
+        grid-template-columns: 80px 80px 80px; 
+        /* grid-template-rows: 1fr 1fr 1fr; */ /* item의 높이 */
+        justify-content: center;
+        padding: 20px; 
       }
     </style>
   </head>
   <body>
     <div id="container">
       <div id="profile">
-        <img src="http://place-hold.it/80x80" />
-        <div id="label">게시물</div>
-        <div id="label">팔로워</div>
-        <div id="label">팔로잉</div>
+        <div class="profile_picture">
+          <img src="http://place-hold.it/60x60" />
+        </div>
+
+        <div><span class="label">1,996</span>게시물</div>
+        <div><span class="label">9</span>팔로워</div>
+        <div><span class="label">20</span>팔로잉</div>
       </div>
       <div id="gallery">
         <img src="http://place-hold.it/80x80" />
