@@ -1,0 +1,43 @@
+#calc {
+  background: rgb(210, 212, 212);
+  margin: 50px auto;
+  width: 123px;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid black;
+  padding: 1px;
+  gap: 1px;
+}
+
+#calc > input {
+  width: 100%;
+}
+
+#calc > button {
+  width: 30px;
+}
+
+#calc :last-child {
+  width: 60px;
+  background: rgb(215, 231, 255);
+  border: 1px solid black;
+  border-radius: 10%;
+}
+
+#calc :nth-child(2) {
+  background: rgb(252, 205, 205);
+  border: 1px solid black;
+  border-radius: 10%;
+}
+
+#calc button:hover {
+  background: rgb(204, 204, 204);
+  border: 1px solid black;
+  border-radius: 10%;
+}
+
+#calc button:active {
+  background: rgb(233, 233, 233);
+  border: 1px solid black;
+  border-radius: 10%;
+}
