@@ -1,0 +1,41 @@
+<script>
+    // numbers 배열의 모든 수를 더하여 반환
+    function sum(numbers) {
+        var total = 0;
+        for(item of numbers){
+            total += item;
+        }
+        return total;
+
+        // reduce (1)
+        // numbers.reduce(function(previousValue, currentValue){ 
+        //     return previousValue + currentValue;
+        // });
+
+        // reduce (2)
+        // return numbers.reduce((previousValue, currentValue) => (previousValue + currentValue))
+
+        // reduce (3)
+        // return numbers.reduce((prev, curr) => (prev + curr))
+
+        // reduce 다른 사용예제
+        // const array1 = [1, 2, 3, 4];
+        // const initialValue = [];
+        // const sumWithInitial = array1.reduce(
+        //     (previousValue, currentValue) => previousValue.concat(currentValue * 2),
+        //     initialValue
+        // );
+        // console.log(sumWithInitial);
+        // expected output: 10
+
+        // forEach
+        // numbers의 number를 function의 매개변수로 넘겨주겠다
+        // numbers.forEach(function (number) {
+        //     answer += number;
+        // });
+    }
+    
+    document.write(sum([2022, 11, 17]));
+    document.write('<br>');
+    document.write(sum([1, 2, 3, 4, 5]));
+</script>
