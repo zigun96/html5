@@ -1,0 +1,15 @@
+<script> // 전역 스코프
+    var a = 'a'; // a = 전역스코프
+    let b = 'b'; // b = 전역스코프 x
+    document.write(window.a);
+    document.write('<br>');
+    document.write(window.b);
+    if (a == 'a') { // 블록 스코프
+        var c = 'c'; // c는 블록 스코프 x -> 전역스코프
+        let d = 'd'; // d는 블록 스코프
+    }
+    document.write('<br>');
+    document.write(window.c);
+    document.write('<br>');
+    document.write(window.d);
+</script>

@@ -1,0 +1,20 @@
+<script> // 전역 스코프
+    (function () { // 함수스코프
+        var a = 'a'; // a = 지역스코프
+        let b = 'b'; // b = 지역스코프
+        var a = 'a2';
+        // let b = 'b2'// let은 다시 선언 불가
+        document.write(a);
+        document.write('<br>');
+        document.write(b);
+        if (a == 'a2') { // 블록 스코프
+            var c = 'c'; // c는 블록 스코프 x -> 함수 스코프
+            let d = 'd'; // d는 블록 스코프 & 지역 스코프
+        }
+        document.write('<br>');
+        document.write(c);
+        document.write('<br>');
+        document.write(d); // error
+    })(); // 익명함수 바로 실행
+
+</script>
