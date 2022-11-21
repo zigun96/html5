@@ -21,6 +21,9 @@
             case '/':
                 result = left / right;
                 break;
+            default:
+                alert('잘못된 입력입니다.');
+                result = 'error';
         }
         alert(`
         ${left} ${operator} ${right} = ${result}\n
