@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script>
+        const left = parseInt(prompt("첫 번째 값", "입력"));
+        const operator = prompt("연산자", "입력");
+        const right = parseInt(prompt("두 번째 값", "입력"));
+        var result = 0;
+        switch (operator) {
+            case '+':
+                result = left + right;
+                break;
+            case '-':
+                result = left - right;
+                break;
+            case '*':
+                result = left * right;
+                break;
+            case '/':
+                result = left / right;
+                break;
+        }
+        alert(`
+        ${left} ${operator} ${right} = ${result}\n
+        `);
+
+    </script>
+</head>
+
+</html>
