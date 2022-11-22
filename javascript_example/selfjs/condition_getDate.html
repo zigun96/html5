@@ -1,0 +1,14 @@
+<script>
+    // Date 객체 선언 : 현재 시간 측정
+    const date = new Date();
+
+    // 요소 추출
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1;
+    const monthday = date.getDate();
+    const day = date.getDay(); // 요일
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    const seconds = date.getSeconds();
+    console.log({ year, month, monthday, day, hours, minutes, seconds });
+</script>
