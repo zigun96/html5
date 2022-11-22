@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+<script>
+    const ms = Date.now();
+    // const ms = Date.parse('2022-11-22 12:20:00'); // 시간 직접 삽입
+    const min30 = 30 * 60 * 1000; // 밀리초 기준 30분
+    const date = new Date(ms - min30);
+    const hour = date.getHours();
+    const minute = date.getMinutes();
+
+    switch (true) {
+        case hour < 9:
+            alert("출근 준비...");
+            break;
+        case hour == 16 && minute >= 50:
+        case hour >= 17:
+            alert("저녁 시간!!!");
+            break;
+        case hour == 11 && minute >= 50:
+        case hour == 12:
+            alert("점심 시간!!");
+            break;
+        case minute >= 50: // 20분 ~ 30분
+            alert("쉬는 시간!");
+            break;
+        default:
+            alert("수업...");
+    }
+</script>
+
+<body></body>
+
+</html>
