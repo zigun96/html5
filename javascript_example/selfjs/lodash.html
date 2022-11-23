@@ -1,0 +1,16 @@
+<!-- loadash 라이브러리 활용 -->
+<script src="https://unpkg.com/lodash"></script>
+<script>
+    // n 이하의 짝수 모두 더하기
+    let n = Number(prompt('n을 입력하세요.'));
+    let sum = 0;
+    // 1<= series < n+1
+    // for 문을 쓸 때 보통 이와같이 많이 쓰기 때문에 이런 형식을 갖춤
+    let series = _.range(1, n + 1); 
+    for (let i of series) {
+        if (i % 2 == 0) {
+            sum += i;
+        }
+    }
+    document.write(sum);
+</script>
