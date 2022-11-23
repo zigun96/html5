@@ -1,0 +1,13 @@
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<script>
+    const todos = ['도시락 싸기', '버스 시간 확인', 'QR코드 찍기'];
+
+    let items = document.querySelectorAll('li');
+    for (let [i, item] of items.entries()) {
+        item.innerText = `${i + 1}번째 할 일: ${todos[i]}`;
+    }
+</script>   
