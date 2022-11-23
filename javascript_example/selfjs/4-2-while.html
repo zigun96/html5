@@ -1,0 +1,14 @@
+<script>
+    const array = ['사과', '배', '바나나', '사과', '배', '바나나'];
+    while(true) {
+        // .indexOf(찾을 요소, 시작위치) : 있으면 배열 위치, 없으면 -1을 반환
+        var index = array.indexOf('바나나');
+        if (index === -1) {
+            break;
+        }
+        // index 위치의 요소를 1개 제거
+        // .splice(인덱스, 제거개수, 요소) // 인덱스에서부터 제거개수만큼 제거
+        array.splice(index, 1);
+    }
+    document.write(array);
+</script>
