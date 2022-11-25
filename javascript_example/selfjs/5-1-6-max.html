@@ -1,0 +1,17 @@
+<script>
+function max(array) {
+    let eval = array[0];
+    let output = [];
+    for (var [i,item] of array.entries()) {
+        if (eval < item) {
+            eval = item;
+            output.splice(0,2,i,item);
+        }
+    }
+    return output;    
+}
+
+const testArray = [52, 273, 32, 103, 275, 24, 57];
+console.log(`${testArray}중에서`);
+console.log(`최대값 = ${max(testArray)}`);
+</script>
