@@ -1,0 +1,20 @@
+<script>
+    function min(first, ...rests) {
+        if (Array.isArray(first)) {
+            var [output, ...items] = first; // 첫 번째 매개변수 구조분해할당
+        } else {
+            var output = first;
+            var items = rests;
+        }
+
+        for (const item of items) {
+            if (output > item) {
+                output = item;
+            }
+        }
+        return output;
+    }
+
+    console.log(`min(배열): ${min([52, 273, 32, 103, 275, 24, 57])}`);
+    console.log(`min(숫자, ...): ${min(52, 273, 32, 103, 275, 24, 57)}`);
+</script>
