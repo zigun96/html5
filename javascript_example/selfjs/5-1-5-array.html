@@ -1,0 +1,23 @@
+<script>
+    function series(a, b) {
+        const output = [];
+        for (let i = a; i <= b; i++) {
+            output.push(i);
+        }
+        return output;
+    }
+
+    function sumArray(array) {
+        let sum = 0;
+        for (let i = 0; i < array.length; i++) {
+            sum += array[i];
+        }
+        return sum;
+    }
+    function sumAtoB(a, b) {
+        return sumArray(series(a, b));
+    }
+
+    console.log(`1부터 100까지의 합: ${sumAtoB(1, 100)}`);
+    console.log(`1부터 500까지의 합: ${sumAtoB(1, 500)}`);
+</script>
