@@ -1,0 +1,10 @@
+<script>
+    let numbers = new Array(10).fill().map((_, i) => i);
+
+    numbers
+        .filter((value)=> value % 2 === 0)
+        .map((value) => value * value)
+        .forEach((value) => {
+            console.log(value)
+        });
+</script>
