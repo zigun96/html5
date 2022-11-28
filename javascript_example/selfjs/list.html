@@ -1,0 +1,13 @@
+<script>
+    // .filter() 메소드 구현
+    filter(callback) {
+        const result = [];
+        for (let i = 0; i < this.length; i++) {
+            let value = this[i];
+            if (callback(value, i, this)) {
+                result.push(value);
+            }
+        }
+        return result;
+    }
+</script>
