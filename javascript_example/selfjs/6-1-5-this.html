@@ -1,0 +1,20 @@
+<script>
+    const test = {
+        a() {
+            console.log(this); // test
+        },
+        b: () => {
+            var local = 'Joe';
+            console.log(this); // window
+        },
+    };
+    console.log(window.local); // undefined
+    console.log(test.a.name); // a
+    // 메소드 호출
+    test.a(); // test
+    test.b(); // window
+    var a = test.a;
+    a(); // window 
+    a = test.a.bind(test); // 함수에 this를 지정해준다.
+    a(); // test
+</script>
