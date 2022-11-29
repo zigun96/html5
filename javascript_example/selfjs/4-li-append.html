@@ -3,10 +3,10 @@
 <script>
     const todos = ['도시락 싸기', '버스 시간 확인', 'QR코드 찍기'];
     const ul = document.querySelector('ul');
-
+    // todos.forEach(function(text, i)) 으로도 사용 가능
     for(let[i, text] of todos.entries()) {
-        let li = document.createElement('li');
+        let li = document.createElement('li'); // 태그 생성
         li.innerText = `${i + 1}번째 할 일: ${text}`;
-        document.write(li);
+        ul.appendChild(li); // <ul>에 마지막 자식으로 추가
     }
 </script>
