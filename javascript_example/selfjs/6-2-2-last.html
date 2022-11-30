@@ -1,0 +1,15 @@
+<script>
+    String.prototype.toArray = function () {
+        return this.split('');
+    };
+
+    Array.prototype.last = function () {
+        return this[this.length - 1];
+    };
+
+    const a = '안녕하세요.';
+    console.log(a.toArray());
+
+    const b = [273, 32, 103, 57, 52];
+    console.log(b.last());
+</script>
