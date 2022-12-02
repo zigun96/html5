@@ -1,0 +1,26 @@
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const rects = document.querySelectorAll('.rect');
+
+        rects.forEach((rect, index) => {
+            // 특정 속성을 추출
+            const width = rect.getAttribute('width');
+            const src = `http://placekitten.com/${width}/250`;
+            rect.setAttribute('src', src);
+        });
+    });
+</script>
+<body>
+    <img class = "rect" width = "109"/>
+    <img class = "rect" width = "110"/>
+    <img class = "rect" width = "111"/>
+    <img class = "rect" width = "112"/>
+    <img class = "rect" width = "113"/>
+    <img class = "rect" width = "114"/>
+    <img class = "rect" width = "115"/>
+    <img class = "rect" width = "116"/>
+    <img class = "rect" width = "117"/>
+    <img class = "rect" width = "118"/>
+    <img class = "rect" width = "119"/>
+    <img class = "rect" width = "120"/>
+</body>

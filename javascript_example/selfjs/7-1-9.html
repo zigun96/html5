@@ -1,0 +1,30 @@
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // 문서 객체 읽고 생성
+        const divA = document.querySelector('#first');
+        const divB = document.querySelector('#second');
+        const h1 = document.createElement('h1');
+        h1.textContent = '이동하는 h1 태그';
+        // 무한 콜백함수 구현
+        const toFirst = () => {
+            divA.appendChild(h1);
+            setTimeout(toSecond, 5000);
+        };
+        const toSecond = () => {
+            divB.appendChild(h1);
+            setTimeout(toFirst, 5000);
+        };
+        toFirst();
+    });
+</script>
+
+<body>
+      <div id="first">
+            <h1>첫 번째 div 태그 내부</h1>
+          </div>
+     
+    <hr />
+      <div id="second">
+            <h1>두 번째 div 태그 내부</h1>
+          </div>
+</body>
