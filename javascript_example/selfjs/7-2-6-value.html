@@ -1,0 +1,24 @@
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const select = document.querySelector('select');
+        const p = document.querySelector('p');
+
+        select.addEventListener('change', (event) => {
+            const options = event.currentTarget.options;
+            // 선택된 option의 인덱스를 가져옴
+            const index = options.selectedIndex;
+
+            p.textContent = `선택: ${options[index].value}`;
+        })
+    })
+</script>
+<body>
+    <select>
+        <option value="분류" selected disabled>분류</option>
+        <option value="떡볶이">떡볶이</option>
+        <option value="순대">순대</option>
+        <option value="오뎅">오뎅</option>
+        <option value="튀김">튀김</option>
+    </select>
+    <p>선택: 미선택</p>
+</body>

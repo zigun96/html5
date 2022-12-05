@@ -1,0 +1,27 @@
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const select = document.querySelector('select');
+        const p = document.querySelector('p');
+
+        select.addEventListener('change', (event) => {
+            const options = event.currentTarget.options
+            const list = [];
+            // 옵션들의 옵션이 선택됐는지 다 확인함
+            for (const option of options) {
+                if (option.selected) {
+                    list.push(option.value)
+                }
+            }
+            p.textContent = `선택: ${list.join()}`
+        })
+    })
+</script>
+<body>
+    <select multiple="">
+        <option value="떡볶이">떡볶이</option>
+        <option value="순대">순대</option>
+        <option value="오뎅">오뎅</option>
+        <option value="튀김">튀김</option>
+    </select>
+    <p></p>
+</body>
