@@ -1,0 +1,16 @@
+<body>
+    <input type = "button" id = "hider" value = "Toggle 버튼"/>
+
+    <div id = "text">Text</div>
+    <script>
+        const button = document.getElementById('hider');
+        const text = document.querySelector('#text');
+        button.addEventListener('click', () => {
+            if (text.style.display === 'none') {
+                text.style.display = 'block'; // div 기본값
+            } else { 
+                text.style.display = 'none'; // 숨기기
+            }
+        });
+    </script>
+</body>
