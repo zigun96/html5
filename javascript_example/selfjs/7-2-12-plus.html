@@ -4,12 +4,14 @@
 
         const checkbox = document.querySelector('input');
         checkbox.addEventListener('change', (event) => {
-            status = event.currentTarget.checked;
+            status = checkbox.checked;
         })
 
         const link = document.querySelector('a');
         link.addEventListener('click', (event) => {
+            // status: true시 false , false시 true
             if (!status) {
+                // 이벤트에 대한 사용자의 동작을 실행시키지 않게 함
                 event.preventDefault();
             }
         })

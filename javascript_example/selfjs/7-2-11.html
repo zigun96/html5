@@ -2,7 +2,9 @@
     document.addEventListener('DOMContentLoaded', () => {
         const imgs = document.querySelectorAll('img')
         imgs.forEach((img) => {
+            // 마우스 오른쪽 클릭시 발생하는 이벤트, 이벤트 핸들러
             img.addEventListener('contextmenu', (event) => {
+                // 이벤트에 대한 사용자의 동작을 실행시키지 않게 함
                 event.preventDefault()
             })
         })

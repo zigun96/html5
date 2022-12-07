@@ -1,12 +1,13 @@
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const imgs = document.querySelectorAll('img')
-        
+
+        // 이벤트 발생시 실행 되는 동작을 변수로 저장
         const listener = (event) => {
             event.preventDefault()
-                alert("불펌방지");
+            alert("불펌방지");
         }
-
+        // 이미지마다 이벤트 발생시 할 일들을 저장해둠
         imgs.forEach((img) => {
             img.oncontextmenu = listener;
         })
