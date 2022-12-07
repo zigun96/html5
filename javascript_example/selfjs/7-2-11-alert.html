@@ -1,0 +1,21 @@
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const imgs = document.querySelectorAll('img')
+        
+        const listener = (event) => {
+            event.preventDefault()
+                alert("불펌방지");
+        }
+
+        imgs.forEach((img) => {
+            img.oncontextmenu = listener;
+        })
+        console.log(imgs[0].oncontextmenu == imgs[1].oncontextmenu);
+    })
+</script>
+
+<body>
+      <img src="http://placekitten.com/300/300" alt="">
+      <img src="http://placekitten.com/300/400" alt="">
+
+</body>

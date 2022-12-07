@@ -1,0 +1,14 @@
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const imgs = document.querySelectorAll('img')
+        imgs.forEach((img) => {
+            img.addEventListener('contextmenu', (event) => {
+                event.preventDefault()
+            })
+        })
+    })
+</script>
+
+<body>
+      <img src="http://placekitten.com/300/300" alt="">
+</body>
