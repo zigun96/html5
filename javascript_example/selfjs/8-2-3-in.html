@@ -1,0 +1,12 @@
+<script>
+    function test(object) {
+        // a, b 프로퍼티를 in 으로 확인
+        if ('a' in object && 'b' in object) {
+            console.log(object.a + object.b);
+        } else {
+            throw new Error('a 속성과 b 속성을 지정하지 않았습니다.');
+        }
+    }
+
+    test({});
+</script>

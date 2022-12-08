@@ -1,0 +1,17 @@
+<script>
+    function test() {
+        try {
+            alert ('A 위치입니다.');
+            throw '예외 강제 발생';
+        } catch (exception) {
+            alert('B 위치입니다.');
+            return;
+            // 무조건 실행 (DB 연결 해제 할 때 쓰면 좋음)
+        } finally {
+            alert('C 위치입니다.');
+        }
+    }
+    
+    // 함수 호출
+    test();
+</script>
