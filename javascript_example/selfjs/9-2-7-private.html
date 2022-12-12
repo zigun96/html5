@@ -1,0 +1,35 @@
+<script>
+    // 정사각형 클래스
+    class Square {
+        // 지역 변수와 속성 부분을 구분해서 지정해준다.
+        #length;
+
+        constructor(length) {
+            this.setLength(length);
+        }
+
+        setLength(length) {
+            if (length <= 0) {
+                throw '길이는 0보다 커야 합니다.';
+            }
+            this.#length = length;
+        }
+        
+        // 정사각형의 둘레를 구하는 메소드
+        getPerimeter() {
+            return 4 * this.#length;
+        }
+        // 정사각형의 넓이를 구하는 메소드
+        getArea() {
+            return this.#length * this.#length;
+        }
+    }
+
+    // 클래스 사용하기
+    const square = new Square(10);
+    // 속성값에 직접 음수를 대입한 경우 에러처리 없이 출력이 됨
+    square.length = -10; // #length와 length가 별개의 속성이 됨
+    console.log(`정사각형의 둘레: ${square.getPerimeter()}`);
+    console.log(`정사각형의 넓이: ${square.getArea()}`);
+    // document.write(square.#length); // syntax error
+</script>
