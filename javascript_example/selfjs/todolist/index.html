@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sunflower&display=swap');
+
+        * {
+            font-family: 'Sunflower', sans-serif;
+        }
+
+        body {
+            background: #f9f9f9;
+        }
+
+        main {
+            background: whitesmoke;
+            width: 512px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+            margin: 0 auto;
+            /* 페이지 중앙 정렬 */
+            margin-top: 4rem;
+        }
+
+        .title {
+            padding: 2rem;
+            font-size: 2.5rem;
+            text-align: center;
+            font-weight: 100;
+            background: #503603;
+            color: whitesmoke
+        }
+
+        .form-wrapper {
+            display: flex;
+            padding: 1rem;
+            border-bottom: 1px solid #156e1b;
+        }
+
+        .form-wrapper input {
+            flex: 1;
+            border: 0px;
+            border-bottom: 1px solid #c9c6c6;
+        }
+
+        #add-button {
+            padding: 0.5rem 1rem;
+            margin-left: 1rem;
+            background: #ffe056;
+            border: 0px;
+            border-radius: 3px;
+            color: rgb(0, 0, 0);
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        #add-button:hover {
+            background: #cecece;
+        }
+
+        #todo-list {
+            min-height: 5rem;
+        }
+
+        #todo-list>div {
+            padding: 0.3em;
+            display: flex;
+            align-items: center;
+            gap: 1em;
+        }
+
+        #todo-list span {
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1 class="title">할 일 목록</h1>
+        <div class="form-wrapper">
+            <input id="todo" />
+            <button id="add-button">추가하기</button>
+        </div>
+        <div id="todo-list"></div>
+        <script src="app.js"></script>
+    </main>
+</body>
+
+</html>
