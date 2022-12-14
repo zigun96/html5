@@ -1,0 +1,20 @@
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<div id="root"></div>
+<script type="text/babel">
+    // 애플리케이션 클래스 생성
+    // 'props'가 변화를 감지함
+    class App extends React.Component {
+        render() {
+            return <div>
+                <h1>{this.props.name} 님 안녕하세요!</h1>
+                <img src={this.props.imgUrl} />
+            </div>
+        }
+    }
+
+    // 출력
+    const container = document.getElementById('root')
+    ReactDOM.createRoot(container).render(<App name="구름" imgUrl="http://placedog.net/400/200" />)
+</script>

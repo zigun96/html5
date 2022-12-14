@@ -1,0 +1,16 @@
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<div id="root"></div>
+
+<script type="text/babel">
+    // 애플리케이션 컴포넌트 생성
+    // 기본적으로 function App() = render()라고 설정됨
+    function App() {
+        return <h1>리액트 기본</h1>;
+    }
+
+    // 출력
+    const container = document.getElementById('root')
+    ReactDOM.createRoot(container).render(<App />)
+</script>
