@@ -17,17 +17,14 @@
         };
 
         const handleClick = (event) => {
-            setChecked(event.target.id === 'on');
+            setChecked(!checked);
         };
 
-        return <div>
+        return (
             <div id="on" style={Style} onClick={handleClick}>
-                on
-            </div >
-            <div id="off" style={Style} onClick={handleClick}>
-                off
-            </div >
-        </div>;
+                {checked? 'On' : 'Off'}
+            </div >   
+        );
     }
 
     ReactDOM.createRoot(document.body).render(<App />);
