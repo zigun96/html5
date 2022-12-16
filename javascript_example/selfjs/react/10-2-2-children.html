@@ -1,0 +1,20 @@
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script type="text/babel">
+    // 애플리케이션 함수 생성하기
+    // 함수 컴포넌트 자체가 render()의 기능을 한다.
+    // 여는 태그와 닫는 태그를 기준으로 그것을 하나로 인식한다.
+    const App = () => <ul>
+        <Item />
+        <Item value="Item 컴포넌트 2번" />
+        <Item>Item 컴포넌트 3번</Item>
+    </ul>
+
+    // props.children
+    const Item = (props) => <li>
+        {props.value || props.children || 'Item 컴포넌트'}
+    </li>
+    // 출력하기    
+    ReactDOM.createRoot(document.body).render(<App />);
+</script>
