@@ -1,0 +1,21 @@
+<script>
+    // pending 대기상태
+    var pending = new Promise((resolve) => {});
+    // var pending 내용 출력
+    console.log(pending);
+    
+    // fulfilled 성공상태
+    var fulfilled = new Promise((resolve) => {
+        resolve('fulfilled');
+    });
+    // var fulfilled 내용 출력
+    console.log(fulfilled);
+
+    // rejected 실패상태
+    var rejected = new Promise((resolve, reject) => {
+        // throw new Error('rejected');
+        reject(new Error('rejected'));
+    });
+    // var rejected 내용 출력
+    console.log(rejected);
+</script>

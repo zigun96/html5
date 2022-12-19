@@ -1,0 +1,14 @@
+<script src="https://unpkg.com/axios"></script>
+<script>
+    (async () => {
+        try {
+            let response = await axios.get('https://jsonplaceholder.typicode.com/todos/1');
+            let data = response.data;
+            document.write(JSON.stringify(data)); // String
+            console.log(data); // Object
+        } catch (error) {
+            document.write(error);
+            console.error(error);
+        }
+    })();
+</script>

@@ -1,0 +1,22 @@
+<script>
+    let xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = (event) => {
+        if (xhr.readyState !== XMLHttpRequest.DONE) {
+            return;
+        }
+        let text = xhr.responseText;
+        if (![200, 201].includes(xhr.status)) {
+            console.log(xhr.status || 'error');
+            return;
+        }
+        document.write(text);
+        // String을 Object로 변환
+        let data = JSON.parse(text);
+        console.log(data);
+    };
+    xhr.onerror = (event) => {
+        console.error(event.type);
+    };
+    xhr.open('GET', 'https://jsonplaceholder.typicode.com/todos/1');
+    xhr.send();
+</script>

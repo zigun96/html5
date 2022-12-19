@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        // return에 promise가 있다 => 비동기 실행 함수다.
+        function longRunningTask() {
+            return new Promise((resolve, _) => { // reject
+                setTimeout(() => {
+                    // 오래 걸리는 작업
+                    for (let i = 0; i < 2222222222; i++);
+                    resolve('작업 끝');
+                }, 0);
+            });
+        }
+        console.log('시작');
+        // 성공적으로 수행되었을 때 실행
+        longRunningTask().then((value) => {
+            console.log(value);
+            console.log('다음 작업');
+        });
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

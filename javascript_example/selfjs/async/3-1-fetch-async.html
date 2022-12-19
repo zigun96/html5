@@ -1,0 +1,20 @@
+<script>
+    // 비동기 익명함수
+    (async () => {
+        try {
+            // fetch의 결과는 응답의 여부만 반환
+            let response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+            if (!response.ok) {
+                // 예외를 먼저 처리
+                throw new Error(response.status);
+            }
+            // 정상값을 반환 받았을 때 실행되는 구문
+            let data = await response.json();
+            document.write(JSON.stringify(data)); // String
+            console.log(data); // Object
+        } catch (error) {
+            document.write(error);
+            console.log(error);
+        }
+    })();
+</script>
