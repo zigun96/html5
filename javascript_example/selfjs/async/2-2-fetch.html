@@ -2,8 +2,9 @@
     fetch('https://jsonplaceholder.typicode.com/todos/1')
     .then((response) => {
         if (response.ok) {
-            return response.json();
+            return response.json(); // Promise
         }
+        // return Promise.reject(response.status);
         throw new Error(response.status);
     })
     .then((data) => {
@@ -13,5 +14,5 @@
     .catch((error) => {
         document.write(error);
         console.log(error);
-    });s
+    });
 </script>
