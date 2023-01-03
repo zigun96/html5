@@ -5,13 +5,15 @@ document.querySelector('#updateButton').onclick = () => {
     // .then((res) => res.text())
     // .then((text) => {
     //     document.querySelector('#data').textContent = text;
-    // })
+    // }) 
     .then((res) => res.json())
     .then((data) => {
-        console.log(data);
-        const row = data.RealtimeCityAir.row;
-        document.querySelector('#data').textContent = JSON.stringify(row);
-
+      console.log(data);
+      const row = data.RealtimeCityAir.row;
+      // document.querySelector('#data').textContent = JSON.stringify(row);
+      let ul = document.querySelector('#data');
+      row
+        .map((city) => `${city.MSRSTE_NM} : ${city.PM25}`)
+        .forEach((item) => ul.insertAdjacentHTML('beforeend', `<li>${item}</li>`));
     });
-    
 };
