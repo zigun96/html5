@@ -12,8 +12,9 @@ document.querySelector('#updateButton').onclick = () => {
       const row = data.RealtimeCityAir.row;
       // document.querySelector('#data').textContent = JSON.stringify(row);
       let ul = document.querySelector('#data');
+      ul.innerHTML = '';
       row
-        .map((city) => `${city.MSRSTE_NM} : ${city.PM25}`)
-        .forEach((item) => ul.insertAdjacentHTML('beforeend', `<li>${item}</li>`));
+        .map((city) => `<li>${city.MSRSTE_NM} : ${city.PM10}</li>`)
+        .forEach((item) => ul.insertAdjacentHTML('beforeend', item));
     });
 };

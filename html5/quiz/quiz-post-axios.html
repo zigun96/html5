@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<script src="" https://unpkg.com/axios></script>
+<input name="message" />
+<button>전송</button>
+<pre></pre>
+<script>
+    const button = document.querySelector('button');
+    const pre = document.querySelector('pre');
+    button.addEventListener('click', () => {
+        axios.post('https://httpbin.org/post', {
+            detetime: new Date(),
+            message: document.querySelector('[name=message]')
+        }).then((data) => {
+            let text = JSON.stringify(data, null, 2);
+            pre.textContent = text;
+        }).then((text) => {
+            document.write(`<pre>${text}</pre>`);
+        }).catch((error) => {
+            console.error(error);
+        });
+    });
+</script>
+
+</html>

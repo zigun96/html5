@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h3>msg: <input id="input"><input type="button" id="btn" value="전송"></h3>
+</body>
+
+<script>
+    document.querySelector("#btn").onclick = () => {
+        let json = JSON.stringify({
+            datetime: new Date(),
+            msg: document.querySelector("#input").value
+        });
+        fetch('https://httpbin.org/post', {
+            /* HTTP 요청에 대한 옵션 */
+            body: json,
+            headers: { 'Content-Type': 'application/json' },
+            method: 'POST',
+        }).then((res) => {
+            return res.ok ? res.text() : Promise.reject(res.status)
+        }).then((text) => {
+            document.write(`<pre>${text}</pre>`);
+        }).catch((error) => {
+            console.error(error);
+        });
+    }
+</script>
+
+</html>
